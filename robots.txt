@@ -1,0 +1,39 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://documentgeneratorhub.online/sitemap.xml
+
+# Allow all search engines to crawl the site
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Crawl-delay for general bots
+Crawl-delay: 1
+
+# Disallow admin or private areas (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow all document generators
+Allow: /generators/
+
+# Allow all assets
+Allow: /assets/
+
+# Allow all main pages
+Allow: /about.html
+Allow: /contact.html
+Allow: /faq.html
+Allow: /privacy-policy.html
+Allow: /terms-of-service.html
+Allow: /disclaimer.html

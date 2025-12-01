@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Document Generator Hub | Frequently Asked Questions</title>
+    <meta name="description" content="Find answers to common questions about Document Generator Hub. Learn how to use our document generators, export options, privacy policy, and more.">
+    <meta name="keywords" content="document generator FAQ, frequently asked questions, how to use document generators, export options, privacy questions">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <style>
+        .faq-category {
+            margin-bottom: 3rem;
+        }
+        
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 1.5rem;
+            background: var(--bg-light);
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background var(--transition-fast);
+        }
+        
+        .faq-question:hover {
+            background: #e0f2fe;
+        }
+        
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--primary-color);
+            transition: transform var(--transition-fast);
+        }
+        
+        .faq-item.active .faq-question::after {
+            content: '−';
+        }
+        
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height var(--transition-normal), padding var(--transition-normal);
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 1.5rem;
+            max-height: 1000px;
+        }
+        
+        .search-box {
+            margin-bottom: 3rem;
+            max-width: 600px;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border: 2px solid var(--primary-light);
+            border-radius: var(--radius-md);
+            font-size: 1rem;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+        
+        .no-results {
+            display: none;
+            text-align: center;
+            padding: 3rem;
+            background: var(--bg-light);
+            border-radius: var(--radius-lg);
+            margin-top: 2rem;
+        }
+        
+        .faq-navigation {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .faq-nav-link {
+            padding: 0.75rem 1.5rem;
+            background: var(--bg-light);
+            border-radius: var(--radius-md);
+            color: var(--text-light);
+            font-weight: 500;
+        }
+        
+        .faq-nav-link.active {
+            background: var(--primary-color);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="/" class="logo">
+                    <img src="assets/images/logo.svg" alt="Document Generator Hub Logo">
+                    <span>DocumentGeneratorHub</span>
+                </a>
+                <div class="nav-menu">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <div class="dropdown">
+                        <a href="#" class="nav-link">Generators ▾</a>
+                        <div class="dropdown-content">
+                            <a href="index.html#business">Business Documents</a>
+                            <a href="index.html#legal">Legal Documents</a>
+                            <a href="index.html#hr">HR & Salary</a>
+                            <a href="index.html#personal">Personal Documents</a>
+                            <a href="index.html#education">Education</a>
+                        </div>
+                    </div>
+                    <a href="faq.html" class="nav-link active">FAQ</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container">
+            <div class="seo-content">
+                <h1>Frequently Asked Questions</h1>
+                <p class="section-subtitle">Find answers to common questions about using Document Generator Hub</p>
+                
+                <div class="search-box">
+                    <input type="text" class="search-input" placeholder="Search for questions or topics...">
+                </div>
+                
+                <div class="faq-navigation">
+                    <a href="#general" class="faq-nav-link active">General</a>
+                    <a href="#usage" class="faq-nav-link">Usage</a>
+                    <a href="#export" class="faq-nav-link">Export & Download</a>
+                    <a href="#privacy" class="faq-nav-link">Privacy & Security</a>
+                    <a href="#technical" class="faq-nav-link">Technical</a>
+                    <a href="#legal" class="faq-nav-link">Legal</a>
+                </div>
+                
+                <div class="no-results" id="noResults">
+                    <h3>No results found</h3>
+                    <p>Try searching with different keywords or browse the categories below.</p>
+                </div>
+                
+                <!-- General Questions -->
+                <div class="faq-category" id="general">
+                    <h2>General Questions</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            What is Document Generator Hub?
+                        </div>
+                        <div class="faq-answer">
+                            <p>Document Generator Hub is a free online platform that provides 40+ document creation tools. We offer generators for invoices, contracts, salary slips, resumes, certificates, and many other document types. All our tools are completely free to use with no registration required.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Is Document Generator Hub really free?
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, absolutely! All our document generators are 100% free to use. There are no hidden fees, no premium subscriptions, and no registration required. You can use any of our tools as many times as you need without any cost.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Do I need to create an account?
+                        </div>
+                        <div class="faq-answer">
+                            <p>No, you don't need to create an account or register to use our tools. You can access all our document generators immediately without any sign-up process. This ensures maximum privacy and convenience.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            What types of documents can I create?
+                        </div>
+                        <div class="faq-answer">
+                            <p>We offer 40+ document generators across 6 categories:</p>
+                            <ul>
+                                <li><strong>Business Documents:</strong> Invoices, quotations, purchase orders, business proposals</li>
+                                <li><strong>Legal Documents:</strong> Contracts, NDAs, agreements, legal forms</li>
+                                <li><strong>HR & Salary:</strong> Salary slips, appointment letters, experience certificates</li>
+                                <li><strong>Personal Documents:</strong> Resumes, cover letters, personal agreements</li>
+                                <li><strong>Education:</strong> Certificates, award templates, recommendation letters</li>
+                                <li><strong>Specialized:</strong> GST invoices, restaurant bills, medical prescriptions</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Who can use Document Generator Hub?
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our tools are designed for:</p>
+                            <ul>
+                                <li><strong>Business Owners:</strong> Create professional business documents</li>
+                                <li><strong>Freelancers:</strong> Generate invoices, contracts, proposals</li>
+                                <li><strong>HR Professionals:</strong> Create HR documents and salary slips</li>
+                                <li><strong>Students:</strong> Build resumes, create certificates</li>
+                                <li><strong>Individuals:</strong> Personal documents and agreements</li>
+                                <li><strong>Professionals:</strong> Legal documents, business proposals</li>
+                            </ul>
+                            <p>Basically, anyone who needs to create professional documents can use our tools.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Usage Questions -->
+                <div class="faq-category" id="usage">
+                    <h2>Usage & Features</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            How do I use the document generators?
+                        </div>
+                        <div class="faq-answer">
+                            <p>Using our document generators is simple:</p>
+                            <ol>
+                                <li><strong>Select a Generator:</strong> Choose from our collection of 40+ tools</li>
+                                <li><strong>Fill the Form:</strong> Enter your information in the user-friendly form</li>
+                                <li><strong>Customize:</strong> Adjust formatting, add logos if supported</li>
+                                <li><strong>Preview:</strong> View your document in real-time</li>
+                                <li><strong>Download:</strong> Export in your preferred format (PDF, Word, Excel)</li>
+                            </ol>
+                            <p>Each generator has clear instructions and tooltips to guide you through the process.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Can I customize the document templates?
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! Most of our generators offer customization options:</p>
+                            <ul>
+                                <li><strong>Text Customization:</strong> Edit all text fields to match your needs</li>
+                                <li><strong>Formatting Options:</strong> Some generators allow font and color changes</li>
+                                <li><strong>Logo Upload:</strong> Business document generators support logo upload</li>
+                                <li><strong>Layout Selection:</strong> Choose from multiple template designs</li>
+                                <li><strong>Field Management:</strong> Add or remove fields as needed</li>
+                            </ul>
+                            <p>The level of customization varies by generator, but all allow basic text editing.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Do you have India-specific features?
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we offer several India-specific features:</p>
+                            <ul>
+                                <li><strong>GST Calculations:</strong> Automatic GST computation in invoices</li>
+                                <li><strong>PF/ESI Calculations:</strong> Salary slip generator includes PF and ESI calculations</li>
+                                <li><strong>Professional Tax:</strong> State-wise professional tax calculations</li>
+                                <li><strong>Indian Formats:</strong> Documents formatted for Indian business standards</li>
+                                <li><strong>Rupee Formatting:</strong> Proper Indian currency formatting</li>
+                                <li><strong>Compliance Forms:</strong> Forms compliant with Indian regulations</li>
+                            </ul>
+                            <p>These features make our tools particularly useful for Indian businesses and professionals.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Can I save my documents online?
+                        </div>
+                        <div class="faq-answer">
+                            <p>For privacy reasons, we don't offer online document storage. However, you can:</p>
+                            <ul>
+                                <li><strong>Download Immediately:</strong> Export documents to your device</li>
+                                <li><strong>Browser Storage:</strong> Some generators save drafts in your browser's local storage</li>
+                                <li><strong>Cloud Storage:</strong> Save downloaded documents to your preferred cloud service</li>
+                                <li><strong>Email to Yourself:</strong> Some generators offer email export options</li>
+                            </ul>
+                            <p>We prioritize your privacy by not storing your documents on our servers.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Are there any usage limits?
+                        </div>
+                        <div class="faq-answer">
+                            <p>No, there are no usage limits. You can:</p>
+                            <ul>
+                                <li>Use any generator as many times as you need</li>
+                                <li>Generate unlimited documents</li>
+                                <li>Download unlimited copies</li>
+                                <li>Access all features without restrictions</li>
+                                <li>Use our tools for personal or commercial purposes</li>
+                            </ul>
+                            <p>Our platform is completely free without any limitations on usage.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Export & Download Questions -->
+                <div class="faq-category" id="export">
+                    <h2>Export & Download</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            What file formats can I export to?
+                        </div>
+                        <div class="faq-answer">
+                            <p>Most generators support multiple export formats:</p>
+                            <ul>
+                                <li><strong>PDF:</strong> High-quality, print-ready PDF documents</li>
+                                <li><strong>Word (DOCX):</strong> Editable Microsoft Word documents</li>
+                                <li><strong>Excel (XLSX):</strong> Spreadsheet format for data-heavy documents</li>
+                                <li><strong>Plain Text:</strong> Simple text format</li>
+                                <li><strong>HTML:</strong> Web format for online use</li>
+                                <li><strong>Image (PNG/JPEG):</strong> Some certificates and awards</li>
+                            </ul>
+                            <p>Available formats vary by generator type. Most business documents support PDF, Word, and Excel exports.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Is the PDF export print-ready?
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, all PDF exports are print-ready with:</p>
+                            <ul>
+                                <li><strong>Proper Margins:</strong> Standard margins for A4/US Letter paper</li>
+                                <li><strong>High Resolution:</strong> 300 DPI for crisp printing</li>
+                                <li><strong>Embedded Fonts:</strong> All fonts embedded for consistent display</li>
+                                <li><strong>Color Management:</strong> Optimized for both color and black & white printing</li>
+                                <li><strong>Page Setup:</strong> Proper page orientation and size</li>
+                            </ul>
+                            <p>You can directly print the PDF files or send them to professional printers.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Can I edit the documents after downloading?
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, depending on the export format:</p>
+                            <ul>
+                                <li><strong>Word (DOCX):</strong> Fully editable in Microsoft Word or free alternatives</li>
+                                <li><strong>Excel (XLSX):</strong> Fully editable in Excel or spreadsheet software</li>
+                                <li><strong>PDF:</strong> Requires PDF editing software, but text remains selectable</li>
+                                <li><strong>Plain Text/HTML:</strong> Easily editable in any text editor</li>
+                            </ul>
+                            <p>We recommend exporting to Word format if you need to make frequent edits.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Do downloads include watermarks?
+                        </div>
+                        <div class="faq-answer">
+                            <p>No, we don't add watermarks to your documents. What you get:</p>
+                            <ul>
+                                <li><strong>Clean Documents:</strong> No watermarks or logos added</li>
+                                <li><strong>Professional Output:</strong> Documents look like you created them professionally</li>
+                                <li><strong>Brand Neutral:</strong> No Document Generator Hub branding on your documents</li>
+                                <li><strong>Commercial Use Ready:</strong> Suitable for business and professional use</li>
+                            </ul>
+                            <p>Your documents are yours alone, with no branding from our platform.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            What if the download doesn't work?
+                        </div>
+                        <div class="faq-answer">
+                            <p>If you're having trouble downloading:</p>
+                            <ol>
+                                <li><strong>Check Browser Settings:</strong> Ensure downloads are not blocked</li>
+                                <li><strong>Try Different Browser:</strong> Some browsers handle downloads better</li>
+                                <li><strong>Clear Cache:</strong> Clear browser cache and try again</li>
+                                <li><strong>Disable Extensions:</strong> Temporarily disable ad-blockers or download managers</li>
+                                <li><strong>Check Storage:</strong> Ensure you have enough storage space</li>
+                                <li><strong>Try Different Format:</strong> If PDF doesn't work, try Word or Excel</li>
+                            </ol>
+                            <p>If problems persist, please contact us through our contact page.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Privacy & Security Questions -->
+                <div class="faq-category" id="privacy">
+                    <h2>Privacy & Security</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Is my data private and secure?
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we prioritize your privacy and security:</p>
+                            <ul>
+                                <li><strong>Client-Side Processing:</strong> All document generation happens in your browser</li>
+                                <li><strong>No Server Storage:</strong> We don't store your documents or data on our servers</li>
+                                <li><strong>No Data Collection:</strong> We don't collect personal information</li>
+                                <li><strong>HTTPS Encryption:</strong> All connections are encrypted</li>
+                                <li><strong>No Tracking:</strong> We use minimal, privacy-respecting analytics</li>
+                                <li><strong>GDPR Compliant:</strong> Designed with privacy regulations in mind</li>
+                            </ul>
+                            <p>Your data stays on your device and never leaves your browser.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Do you store my documents?
+                        </div>
+                        <div class="faq-answer">
+                            <p>No, we do not store your documents. Here's what happens:</p>
+                            <ul>
+                                <li><strong>Local Processing:</strong> Documents are created in your browser's memory</li>
+                                <li><strong>Immediate Download:</strong> Documents are downloaded directly to your device</li>
+                                <li><strong>No Cloud Storage:</strong> We don't upload or store documents in the cloud</li>
+                                <li><strong>Session Storage:</strong> Some drafts may be temporarily saved in browser storage</li>
+                                <li><strong>Automatic Clearing:</strong> Temporary data clears when you close the browser</li>
+                            </ul>
+                            <p>You have complete control over where and how your documents are stored.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Do you use cookies?
+                        </div>
+                        <div class="faq-answer">
+                            <p>We use minimal cookies for essential functions:</p>
+                            <ul>
+                                <li><strong>Strictly Necessary:</strong> Basic functionality cookies</li>
+                                <li><strong>Analytics:</strong> Anonymous usage statistics (no personal data)</li>
+                                <li><strong>Preference:</strong> Remember your settings and preferences</li>
+                                <li><strong>No Tracking:</strong> We don't use tracking cookies for advertising</li>
+                                <li><strong>Easy Control:</strong> You can disable non-essential cookies</li>
+                            </ul>
+                            <p>For details, please see our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Can I use your tools for sensitive documents?
+                        </div>
+                        <div class="faq-answer">
+                            <p>While our tools are secure, we recommend:</p>
+                            <ul>
+                                <li><strong>Business Documents:</strong> Perfectly safe for invoices, contracts, etc.</li>
+                                <li><strong>Sensitive Information:</strong> Avoid including extremely sensitive data</li>
+                                <li><strong>Legal Documents:</strong> Suitable for templates, but consult lawyers for final versions</li>
+                                <li><strong>Personal Use:</strong> Great for resumes, certificates, personal documents</li>
+                                <li><strong>Best Practice:</strong> Always review documents before sharing</li>
+                            </ul>
+                            <p>Remember: Your documents never leave your device, providing an extra layer of security.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Technical Questions -->
+                <div class="faq-category" id="technical">
+                    <h2>Technical Support</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            What browsers are supported?
+                        </div>
+                        <div class="faq-answer">
+                            <p>We support all modern browsers:</p>
+                            <ul>
+                                <li><strong>Chrome:</strong> Version 80+ (recommended)</li>
+                                <li><strong>Firefox:</strong> Version 75+</li>
+                                <li><strong>Safari:</strong> Version 13+</li>
+                                <li><strong>Edge:</strong> Version 80+</li>
+                                <li><strong>Opera:</strong> Version 67+</li>
+                                <li><strong>Mobile Browsers:</strong> Chrome Mobile, Safari Mobile</li>
+                            </ul>
+                            <p>For best results, use the latest version of your browser. Older browsers may have limited functionality.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Do your tools work on mobile devices?
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! Our tools are fully responsive and work on:</p>
+                            <ul>
+                                <li><strong>Smartphones:</strong> iPhone, Android phones</li>
+                                <li><strong>Tablets:</strong> iPad, Android tablets</li>
+                                <li><strong>Mobile Browsers:</strong> All major mobile browsers</li>
+                                <li><strong>Touch Optimization:</strong> Touch-friendly interfaces</li>
+                                <li><strong>Offline Capability:</strong> Some features work offline</li>
+                            </ul>
+                            <p>You can create documents on the go from your mobile device.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Why is a generator not working properly?
+                        </div>
+                        <div class="faq-answer">
+                            <p>If a generator isn't working:</p>
+                            <ol>
+                                <li><strong>Refresh the Page:</strong> Simple refresh often fixes issues</li>
+                                <li><strong>Clear Cache:</strong> Clear browser cache and cookies</li>
+                                <li><strong>Update Browser:</strong> Use the latest browser version</li>
+                                <li><strong>Disable Extensions:</strong> Some extensions interfere with functionality</li>
+                                <li><strong>Check Internet:</strong> Ensure stable internet connection</li>
+                                <li><strong>Try Different Device:</strong> Test on another device</li>
+                            </ol>
+                            <p>If problems continue, please <a href="contact.html">contact us</a> with details.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Do I need to install any software?
+                        </div>
+                        <div class="faq-answer">
+                            <p>No installation required! Our tools are:</p>
+                            <ul>
+                                <li><strong>Web-Based:</strong> Access through your browser</li>
+                                <li><strong>No Downloads:</strong> No software to install</li>
+                                <li><strong>No Plugins:</strong> Works with standard browser features</li>
+                                <li><strong>No Accounts:</strong> No registration or login needed</li>
+                                <li><strong>Instant Access:</strong> Start using immediately</li>
+                            </ul>
+                            <p>Just visit our website and start creating documents.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Are there keyboard shortcuts?
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we support common keyboard shortcuts:</p>
+                            <ul>
+                                <li><strong>Ctrl+S / Cmd+S:</strong> Save/Save As (in some generators)</li>
+                                <li><strong>Ctrl+P / Cmd+P:</strong> Print document</li>
+                                <li><strong>Tab:</strong> Move between form fields</li>
+                                <li><strong>Enter:</strong> Submit forms or move to next section</li>
+                                <li><strong>Esc:</strong> Close modals or cancel actions</li>
+                            </ul>
+                            <p>Specific generators may have additional shortcuts - look for tooltips or help icons.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Legal Questions -->
+                <div class="faq-category" id="legal">
+                    <h2>Legal & Compliance</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Are the legal documents legally binding?
+                        </div>
+                        <div class="faq-answer">
+                            <p>Important disclaimer:</p>
+                            <ul>
+                                <li><strong>Templates Only:</strong> We provide document templates, not legal advice</li>
+                                <li><strong>Professional Review:</strong> Always have legal documents reviewed by a lawyer</li>
+                                <li><strong>Jurisdiction Matters:</strong> Laws vary by country, state, and situation</li>
+                                <li><strong>Customization Needed:</strong> Templates need to be customized for your specific needs</li>
+                                <li><strong>No Guarantee:</strong> We don't guarantee legal validity or enforceability</li>
+                            </ul>
+                            <p>Our legal document generators are for informational purposes only. Consult a qualified attorney for legal matters.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Can I use generated documents commercially?
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, you can use generated documents for:</p>
+                            <ul>
+                                <li><strong>Business Use:</strong> Invoices, contracts, business proposals</li>
+                                <li><strong>Commercial Projects:</strong> Client work, business operations</li>
+                                <li><strong>Personal Use:</strong> Resumes, personal documents</li>
+                                <li><strong>Educational Use:</strong> Certificates, academic documents</li>
+                                <li><strong>Non-Profit Use:</strong> Organizational documents</li>
+                            </ul>
+                            <p>There are no restrictions on commercial use of documents you create with our tools.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Do you guarantee document accuracy?
+                        </div>
+                        <div class="faq-answer">
+                            <p>We strive for accuracy but provide this important notice:</p>
+                            <ul>
+                                <li><strong>Best Efforts:</strong> We make best efforts to ensure accurate templates</li>
+                                <li><strong>No Warranty:</strong> We don't warrant accuracy or completeness</li>
+                                <li><strong>User Responsibility:</strong> Users must verify information accuracy</li>
+                                <li><strong>Professional Advice:</strong> Consult professionals for important documents</li>
+                                <li><strong>Regular Updates:</strong> We update templates as regulations change</li>
+                            </ul>
+                            <p>Always double-check calculations and information in important documents.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            What is your refund policy?
+                        </div>
+                        <div class="faq-answer">
+                            <p>Since our tools are completely free:</p>
+                            <ul>
+                                <li><strong>No Payments:</strong> We don't charge for using our tools</li>
+                                <li><strong>No Subscriptions:</strong> No recurring payments to refund</li>
+                                <li><strong>Free Forever:</strong> All current tools will remain free</li>
+                                <li><strong>Future Premium:</strong> If we add premium features, clear refund policies will be provided</li>
+                                <li><strong>Satisfaction Guarantee:</strong> Our guarantee is providing valuable free tools</li>
+                            </ul>
+                            <p>You can use our tools risk-free with no financial commitment.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            How do I report issues or errors?
+                        </div>
+                        <div class="faq-answer">
+                            <p>To report issues:</p>
+                            <ol>
+                                <li><strong>Contact Form:</strong> Use our <a href="contact.html">contact form</a></li>
+                                <li><strong>Be Specific:</strong> Include generator name and detailed description</li>
+                                <li><strong>Provide Details:</strong> Browser, device, steps to reproduce</li>
+                                <li><strong>Screenshots:</strong> Include screenshots if possible</li>
+                                <li><strong>Response Time:</strong> We aim to respond within 48 hours</li>
+                            </ol>
+                            <p>We appreciate feedback and promptly address reported issues.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Still Have Questions -->
+                <div class="cta-final">
+                    <h3>Still Have Questions?</h3>
+                    <p>Can't find the answer you're looking for? We're here to help!</p>
+                    <a href="contact.html" class="btn-primary">Contact Us</a>
+                    <p class="cta-note">We typically respond within 24-48 hours</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Document Generator Hub</h3>
+                    <p>Free online document generators for businesses, professionals, and individuals. Create professional documents instantly.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <a href="/">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                    <a href="disclaimer.html">Disclaimer</a>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Popular Generators</h4>
+                    <a href="generators/business/invoice-generator.html">Invoice Generator</a>
+                    <a href="generators/hr-salary/salary-slip-generator.html">Salary Slip Generator</a>
+                    <a href="generators/legal/contract-generator.html">Contract Generator</a>
+                    <a href="generators/personal-career/resume-generator.html">Resume Generator</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Document Generator Hub. All rights reserved. | All tools are provided for educational and informational purposes.</p>
+                <p class="disclaimer-note">Disclaimer: Our document generators provide templates and tools for creating documents. We are not legal professionals and do not provide legal advice. For important legal matters, please consult with a qualified attorney.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // FAQ Toggle Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // FAQ toggle
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close all other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+            
+            // FAQ search functionality
+            const searchInput = document.querySelector('.search-input');
+            const noResults = document.getElementById('noResults');
+            
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase().trim();
+                let hasResults = false;
+                
+                faqItems.forEach(item => {
+                    const question = item.querySelector('.faq-question').textContent.toLowerCase();
+                    const answer = item.querySelector('.faq-answer').textContent.toLowerCase();
+                    
+                    if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                        item.style.display = 'block';
+                        hasResults = true;
+                        
+                        // Highlight matching text
+                        if (searchTerm) {
+                            highlightText(item, searchTerm);
+                        } else {
+                            removeHighlights(item);
+                        }
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                
+                // Show/hide no results message
+                if (searchTerm && !hasResults) {
+                    noResults.style.display = 'block';
+                } else {
+                    noResults.style.display = 'none';
+                }
+            });
+            
+            // FAQ navigation
+            const navLinks = document.querySelectorAll('.faq-nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Update active nav link
+                    navLinks.forEach(nav => nav.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Scroll to category
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Helper function to highlight text
+            function highlightText(element, searchTerm) {
+                const question = element.querySelector('.faq-question');
+                const answer = element.querySelector('.faq-answer');
+                
+                [question, answer].forEach(el => {
+                    const text = el.innerHTML;
+                    const regex = new RegExp(`(${searchTerm})`, 'gi');
+                    el.innerHTML = text.replace(regex, '<mark class="search-highlight">$1</mark>');
+                });
+            }
+            
+            // Helper function to remove highlights
+            function removeHighlights(element) {
+                const highlights = element.querySelectorAll('.search-highlight');
+                highlights.forEach(highlight => {
+                    const parent = highlight.parentNode;
+                    parent.replaceChild(document.createTextNode(highlight.textContent), highlight);
+                    parent.normalize();
+                });
+            }
+            
+            // Open FAQ item from URL hash
+            const hash = window.location.hash;
+            if (hash) {
+                const targetItem = document.querySelector(hash);
+                if (targetItem && targetItem.classList.contains('faq-item')) {
+                    targetItem.classList.add('active');
+                    
+                    // Scroll to item
+                    setTimeout(() => {
+                        window.scrollTo({
+                            top: targetItem.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }, 100);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

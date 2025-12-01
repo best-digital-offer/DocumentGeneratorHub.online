@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Invoice Generator - Create Professional Invoices Online | Document Generator Hub</title>
+    <meta name="description" content="Generate professional invoices instantly with our free online invoice generator. Includes GST/VAT calculations, multiple formats (PDF, Word, Excel), and customizable templates.">
+    <meta name="keywords" content="invoice generator, free invoice maker, GST invoice generator, professional invoice template, online invoice creator, business invoice generator">
+    <link rel="canonical" href="https://documentgeneratorhub.online/generators/business/invoice-generator.html">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID" crossorigin="anonymous"></script>
+    
+    <!-- Schema.org for Invoice Generator -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Free Invoice Generator",
+        "url": "https://documentgeneratorhub.online/generators/business/invoice-generator.html",
+        "description": "Create professional invoices with GST/VAT calculations instantly",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "GST/VAT Calculations",
+            "Multiple Export Formats",
+            "Professional Templates",
+            "Instant Generation"
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="../../" class="logo">
+                    <img src="../../assets/images/logo.svg" alt="Document Generator Hub Logo">
+                    <span>DocumentGeneratorHub</span>
+                </a>
+                <div class="nav-menu">
+                    <a href="../../" class="nav-link">Home</a>
+                    <a href="../../about.html" class="nav-link">About</a>
+                    <div class="dropdown">
+                        <a href="#" class="nav-link active">Generators ▾</a>
+                        <div class="dropdown-content">
+                            <a href="../../index.html#business">Business Documents</a>
+                            <a href="../../index.html#legal">Legal Documents</a>
+                            <a href="../../index.html#hr">HR & Salary</a>
+                            <a href="../../index.html#personal">Personal Documents</a>
+                            <a href="../../index.html#education">Education</a>
+                        </div>
+                    </div>
+                    <a href="../../faq.html" class="nav-link">FAQ</a>
+                    <a href="../../contact.html" class="nav-link">Contact</a>
+                </div>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container">
+            <div class="generator-header">
+                <h1>Free Invoice Generator</h1>
+                <p class="section-subtitle">Create professional invoices with automatic GST/VAT calculations. Export to PDF, Word, or Excel formats instantly.</p>
+            </div>
+
+            <div class="generator-container">
+                <div class="generator-form">
+                    <form id="invoiceForm">
+                        <!-- Business Information -->
+                        <div class="form-section">
+                            <h3>Your Business Information</h3>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="businessName" class="form-label">Business Name *</label>
+                                    <input type="text" id="businessName" name="businessName" class="form-input" required placeholder="Enter your business name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="businessEmail" class="form-label">Email Address *</label>
+                                    <input type="email" id="businessEmail" name="businessEmail" class="form-input" required placeholder="business@example.com">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="businessAddress" class="form-label">Business Address *</label>
+                                <textarea id="businessAddress" name="businessAddress" class="form-textarea" required placeholder="Enter your complete business address" rows="3"></textarea>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="businessPhone" class="form-label">Phone Number</label>
+                                    <input type="tel" id="businessPhone" name="businessPhone" class="form-input" placeholder="+1 (555) 123-4567">
+                                </div>
+                                <div class="form-group">
+                                    <label for="gstNumber" class="form-label">GST/VAT Number</label>
+                                    <input type="text" id="gstNumber" name="gstNumber" class="form-input" placeholder="GST123456789">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Client Information -->
+                        <div class="form-section">
+                            <h3>Client Information</h3>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="clientName" class="form-label">Client Name *</label>
+                                    <input type="text" id="clientName" name="clientName" class="form-input" required placeholder="Enter client name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="clientEmail" class="form-label">Client Email</label>
+                                    <input type="email" id="clientEmail" name="clientEmail" class="form-input" placeholder="client@example.com">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="clientAddress" class="form-label">Client Address *</label>
+                                <textarea id="clientAddress" name="clientAddress" class="form-textarea" required placeholder="Enter client address" rows="3"></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Invoice Details -->
+                        <div class="form-section">
+                            <h3>Invoice Details</h3>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="invoiceNumber" class="form-label">Invoice Number *</label>
+                                    <input type="text" id="invoiceNumber" name="invoiceNumber" class="form-input" required placeholder="INV-001">
+                                </div>
+                                <div class="form-group">
+                                    <label for="invoiceDate" class="form-label">Invoice Date *</label>
+                                    <input type="date" id="invoiceDate" name="invoiceDate" class="form-input" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="dueDate" class="form-label">Due Date</label>
+                                    <input type="date" id="dueDate" name="dueDate" class="form-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="currency" class="form-label">Currency *</label>
+                                    <select id="currency" name="currency" class="form-select" required>
+                                        <option value="USD">USD ($)</option>
+                                        <option value="EUR">EUR (€)</option>
+                                        <option value="GBP">GBP (£)</option>
+                                        <option value="INR">INR (₹)</option>
+                                        <option value="CAD">CAD (C$)</option>
+                                        <option value="AUD">AUD (A$)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Items/Services -->
+                        <div class="form-section">
+                            <h3>Items/Services</h3>
+                            <div id="itemsContainer">
+                                <div class="item-row">
+                                    <div class="form-row">
+                                        <div class="form-group flex-2">
+                                            <label class="form-label">Description *</label>
+                                            <input type="text" name="itemDescription[]" class="form-input" required placeholder="Item or service description">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Quantity *</label>
+                                            <input type="number" name="itemQuantity[]" class="form-input quantity-input" required min="1" value="1">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Rate *</label>
+                                            <input type="number" name="itemRate[]" class="form-input rate-input" required min="0" step="0.01" placeholder="0.00">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Amount</label>
+                                            <input type="text" name="itemAmount[]" class="form-input amount-display" readonly>
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="button" class="btn-small remove-item" style="margin-top: 1.5rem;">Remove</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" id="addItem" class="btn-secondary">Add Another Item</button>
+                        </div>
+
+                        <!-- Tax and Totals -->
+                        <div class="form-section">
+                            <h3>Tax & Totals</h3>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="taxType" class="form-label">Tax Type</label>
+                                    <select id="taxType" name="taxType" class="form-select">
+                                        <option value="none">No Tax</option>
+                                        <option value="gst">GST</option>
+                                        <option value="vat">VAT</option>
+                                        <option value="sales">Sales Tax</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="taxRate" class="form-label">Tax Rate (%)</label>
+                                    <input type="number" id="taxRate" name="taxRate" class="form-input" min="0" max="100" step="0.01" value="0">
+                                </div>
+                            </div>
+                            
+                            <div class="totals-display">
+                                <div class="total-row">
+                                    <span>Subtotal:</span>
+                                    <span id="subtotalDisplay">$0.00</span>
+                                </div>
+                                <div class="total-row">
+                                    <span>Tax:</span>
+                                    <span id="taxDisplay">$0.00</span>
+                                </div>
+                                <div class="total-row total-final">
+                                    <span>Total:</span>
+                                    <span id="totalDisplay">$0.00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Additional Information -->
+                        <div class="form-section">
+                            <h3>Additional Information</h3>
+                            
+                            <div class="form-group">
+                                <label for="notes" class="form-label">Notes/Terms</label>
+                                <textarea id="notes" name="notes" class="form-textarea" placeholder="Payment terms, notes, or additional information" rows="4"></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Generate Buttons -->
+                        <div class="form-actions">
+                            <button type="button" id="previewInvoice" class="btn-secondary">Preview Invoice</button>
+                            <button type="button" id="generatePDF" class="btn-primary">Generate PDF</button>
+                            <button type="button" id="generateWord" class="btn-primary">Generate Word</button>
+                            <button type="button" id="generateExcel" class="btn-primary">Generate Excel</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Preview Container -->
+                <div class="preview-container" id="previewContainer" style="display: none;">
+                    <h3>Invoice Preview</h3>
+                    <div id="invoicePreview" class="invoice-preview"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- AdSense Placement -->
+    <div class="ad-container container">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
+             data-ad-slot="1234567890"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Document Generator Hub</h3>
+                    <p>Free online document generators for businesses, professionals, and individuals. Create professional documents instantly.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <a href="../../">Home</a>
+                    <a href="../../about.html">About Us</a>
+                    <a href="../../faq.html">FAQ</a>
+                    <a href="../../contact.html">Contact</a>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="../../privacy-policy.html">Privacy Policy</a>
+                    <a href="../../terms-of-service.html">Terms of Service</a>
+                    <a href="../../disclaimer.html">Disclaimer</a>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Popular Generators</h4>
+                    <a href="invoice-generator.html">Invoice Generator</a>
+                    <a href="../hr-salary/salary-slip-generator.html">Salary Slip Generator</a>
+                    <a href="../legal/contract-generator.html">Contract Generator</a>
+                    <a href="../personal-career/resume-generator.html">Resume Generator</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Document Generator Hub. All rights reserved. | All tools are provided for educational and informational purposes.</p>
+                <p class="disclaimer-note">Disclaimer: Our document generators provide templates and tools for creating documents. We are not legal professionals and do not provide legal advice. For important legal matters, please consult with a qualified attorney.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/invoice-generator.js"></script>
+    
+    <style>
+        .generator-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 1024px) {
+            .generator-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .form-section {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+        }
+        
+        .form-section h3 {
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-light);
+            padding-bottom: 0.5rem;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        .form-group.flex-2 {
+            grid-column: span 2;
+        }
+        
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-group.flex-2 {
+                grid-column: span 1;
+            }
+        }
+        
+        .item-row {
+            background: var(--bg-light);
+            padding: 1rem;
+            border-radius: var(--radius-md);
+            margin-bottom: 1rem;
+            border: 1px solid var(--border-color);
+        }
+        
+        .totals-display {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            margin-top: 1rem;
+        }
+        
+        .total-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .total-final {
+            border-top: 2px solid var(--primary-color);
+            padding-top: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .form-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .invoice-preview {
+            background: white;
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            font-family: 'Arial', sans-serif;
+            line-height: 1.4;
+        }
+        
+        .remove-item {
+            background: var(--error-color);
+            color: white;
+        }
+        
+        .remove-item:hover {
+            background: #dc2626;
+        }
+    </style>
+</body>
+</html>
