@@ -1,4 +1,4 @@
-# Ezoic ads.txt
+Ezoic ads.txt
 google.com, pub-9616389000213823, DIRECT, f08c47fec0942fa0
 ezoic.com, 37425, DIRECT
 ezoic.com, 127794, RESELLER
