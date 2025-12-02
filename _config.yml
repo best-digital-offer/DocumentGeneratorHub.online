@@ -1,0 +1,4 @@
+# Ensure ads.txt and .well-known are included in the published site
+include:
+  - ads.txt
+  - .well-known/ads.txt
