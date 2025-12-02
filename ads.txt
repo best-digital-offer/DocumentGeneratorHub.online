@@ -1,17 +1,4 @@
-Ezoic ads.txt
 google.com, pub-9616389000213823, DIRECT, f08c47fec0942fa0
 ezoic.com, 37425, DIRECT
 ezoic.com, 127794, RESELLER
 ezoic.com, 127795, RESELLER
-appnexus.com, 11627, DIRECT, f5ab79cb980f11d1
-pubmatic.com, 156213, DIRECT, 5d62403b186f2ace
-rubiconproject.com, 16414, DIRECT, 0bfd66d529a55807
-indexexchange.com, 191770, DIRECT, 50b1c356f2c5c8fc
-openx.com, 539389499, DIRECT, 6a698e2ec38604c6
-sonobi.com, b7af1d9b86, DIRECT, d1ebd9edc1868da8
-adform.com, 2739, DIRECT
-spotxchange.com, 229255, DIRECT, 7842df1d2fe2db34
-lijit.com, 292261, DIRECT, fafdf38b16bf6b2b
-sovrn.com, 292261, DIRECT, fafdf38b16bf6b2b
-triplelift.com, 9267, DIRECT, bad35f13d841f3d2
-taboola.com, 1374892, DIRECT
