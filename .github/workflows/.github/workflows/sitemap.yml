@@ -1,32 +1,86 @@
-name: Update Sitemap
+name: Auto-generate sitemap
 
+# run when you push content and also allow manual runs
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
+  workflow_dispatch:
+
+# need write permission to push back to repo
+permissions:
+  contents: write
 
 jobs:
-  build:
+  sitemap:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v3
+      - name: Checkout repository (with credentials)
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 0
 
-      - name: Generate Sitemap
+      - name: Show git info (debug)
         run: |
-          echo '<?xml version="1.0" encoding="UTF-8"?>' > sitemap.xml
-          echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' >> sitemap.xml
-          for file in $(find . -name "*.html"); do
-            url="http://documentgeneratorhub.online/${file#./}"
-            echo "  <url><loc>${url}</loc></url>" >> sitemap.xml
+          echo "Current branch:"
+          git branch --show-current || echo "(detached)"
+          git remote -v
+          git status --porcelain
+
+      - name: Set variables
+        run: |
+          echo "SITE_URL=https://documentgeneratorhub.online/" >> $GITHUB_ENV
+          echo "main" >> $GITHUB_ENV
+      - name: Find HTML files and list them (debug)
+        run: |
+          echo "Listing HTML files:"
+          find . -type f -name "*.html" -print | sed 's|^\./||' || true
+
+      - name: Build sitemap.xml
+        run: |
+          # adjust this if your site puts built files in _site or docs
+          OUTFILE=sitemap.xml
+          echo '<?xml version="1.0" encoding="UTF-8"?>' > $OUTFILE
+          echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' >> $OUTFILE
+
+          # choose the folder you want to index. change "." to "./_site" or "./docs" if needed
+          INDEX_FOLDER="."
+          for file in $(find $INDEX_FOLDER -type f -name "*.html" | sed 's|^\./||'); do
+            # ignore the sitemap itself if found
+            if [[ "$file" == "sitemap.xml" ]]; then
+              continue
+            fi
+            # convert file path to URL path
+            # remove index.html from URLs (optional)
+            url_path="${file}"
+            url_path="${url_path%index.html}"
+            echo "  <url><loc>${SITE_URL}/${url_path}</loc></url>" >> $OUTFILE
           done
-          echo '</urlset>' >> sitemap.xml
 
-      - name: Commit & Push
+          echo '</urlset>' >> $OUTFILE
+          echo "Generated $(wc -c < $OUTFILE) bytes at $OUTFILE"
+          echo "---- sitemap preview ----"
+          head -n 40 $OUTFILE || true
+
+      - name: Commit & push sitemap if changed
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add sitemap.xml
-          git commit -m "Auto-update sitemap"
-          git push
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add sitemap.xml || true
+          if git diff --staged --quiet; then
+            echo "No changes in sitemap.xml — nothing to commit."
+            exit 0
+          fi
+          git commit -m "chore: auto-update sitemap [skip ci]" || true
+          git push origin HEAD:${TARGET_BRANCH}
+
+      - name: Confirm pushed file (debug)
+        run: |
+          echo "Latest commits:"
+          git --no-pager log -n 5 --oneline
+          echo "Repository root files:"
+          ls -la
+          echo "sitemap content:"
+          sed -n '1,80p' sitemap.xml || true
